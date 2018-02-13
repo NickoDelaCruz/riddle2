@@ -3,8 +3,11 @@ require('riddles_sphinx')
 require('pry')
 
 describe('get_answer') do
-  it("when the question is asked, user must answer") do
-    answer = Riddles.new("It goes vroom ,when you use it you feel like Fred flint stone")
-    expect(answer.get_answer("It goes vroom ,when you use it you feel like Fred flint stone")).to(eq("car"))
-   end
+  it("checks if the answer is correct") do
+ success = Riddles.new("car", "dog")
+ expect(success.questions).to(eq("Success"))
+ end
+ it("checks if the answer is incorrect") do
+success = Riddles.new("bike", "cat")
+expect(success.questions).to(eq("Try Again"))
 end
