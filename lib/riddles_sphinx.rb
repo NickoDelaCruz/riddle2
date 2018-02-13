@@ -8,9 +8,11 @@ class Riddles
 
   def questions
       if @answer1 != "car" && @answer2 != "dog"
-        return false
+        return "wrong"
+      elsif @answer1 == "car" && @answer2 != "dog" || @answer1 != "car" && @answer2
+        return "one wrong"
       else
-        return true
+        return "right"
       end
     end
 
