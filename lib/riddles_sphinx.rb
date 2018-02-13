@@ -8,9 +8,9 @@ class Riddles
 
   def questions
       if @answer1 != "car" && @answer2 != "dog"
-        return "Try Again"
+        return false
       else
-        return "Success"
+        return true
       end
     end
 
